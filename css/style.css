@@ -5,13 +5,17 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
+}
 
-  h1, h2, h3, h4, h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
     font-family: "Oranienbaum", serif;
     font-weight: 400;
     font-style: normal;
-  }
+}
 
 p,
 span {
@@ -40,9 +44,10 @@ header .logo img {
     height: 60px;
 }
 
-header .logo img:hover{
-    box-shadow: 0px 0px 1px  #f5f5f5;
-} 
+header .logo img:hover {
+    box-shadow: 0px 0px 1px #f5f5f5;
+}
+
 header .navbar a {
     margin: 0 15px;
     color: #f2f2f2;
@@ -54,7 +59,7 @@ header .navbar a {
 header .navbar a:hover {
     color: #00c782;
     font-size: 18px;
-    text-shadow: 0.5px 0.5px 10px #00c782 ;
+    text-shadow: 0.5px 0.5px 10px #00c782;
 }
 
 /* ESTILOS SECCIONES*/
@@ -65,7 +70,7 @@ header .navbar a:hover {
     background-size: cover;
     padding-top: 9.375rem;
     animation: change 15s infinite ease-in-out;
-height: 100vh;
+    height: 100vh;
 }
 
 @keyframes change {
@@ -131,13 +136,9 @@ height: 100vh;
     background-image: linear-gradient(90deg, #5a9654 1%, #375e26 52%, #1c201e 100%);
     text-shadow: 0px 0px 1px #f2f2f2;
 }
-/*  QUERY PRESENTACION NAVBAR */
 
-/* a los 700px hay que poner la barra de hamburguesa */
 
-/*  a576px para teléfonos móviles, 768px para tabletas, 
-992px para portátiles, y 1200px para grandes dispositivos. 
-Cómo usar media queries */
+
 
 /* SECCION TRATAMIENTOS */
 
@@ -185,7 +186,7 @@ Cómo usar media queries */
 .nosotros-container {
     width: 100%;
     display: flex;
-  height: 80vh;
+    height: 80vh;
     justify-content: space-between;
     margin-bottom: 150px;
 }
@@ -242,7 +243,7 @@ Cómo usar media queries */
 
 /* Seccion precio */
 .precios-container {
-  
+
     width: 100%;
 }
 
@@ -390,7 +391,7 @@ Cómo usar media queries */
 
 /* PIE DE PAGINA */
 footer {
-  
+
     width: 40px;
     background-color: #232323;
     width: 100%;
@@ -406,14 +407,14 @@ footer {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    
+
 
     color: white;
     padding: 15px 20px;
     border: none;
     border-radius: 50px;
     font-weight: bold;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     transition: background-color 0.3s ease;
     z-index: 1000;
 }
@@ -422,53 +423,20 @@ footer {
     background-color: #1ebe5d;
 }
 
+/* a los 700px hay que poner la barra de hamburguesa */
 
-@media (width <= 576px){
-    .fixed-top{
-        position: fixed;
-    }
-  
-    .tratamientos-container{
-        display: flex;
-        flex-direction: column;
-    }
-    .tratamientos-cards{
-        flex-direction: column;
-        align-items: center;
-       
-    }
+/*  a576px para teléfonos móviles, 768px para tabletas, 
+992px para portátiles, y 1200px para grandes dispositivos. 
+Cómo usar media queries */
 
-.nosotros-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
-}
-
-@media (width > 1600px){
-
-    .Presentacion-container h1 {
-    font-size: 90px;
-    letter-spacing: 4px;
-    line-height: 90px;
-    text-shadow: 2px 2px 2px #232323;
-    }
-    .Presentacion-container h2{
-        font-size: 50px;
-        line-height: 50px;
-    }
-    .Presentacion-container p{
-        margin-top: 80px;
-        width: 250px;
-    }
-}
-@media (width <= 576px){
-    .navbar{
+@media (width <=810px) {
+    .navbar {
         display: none;
-        
     }
-    .Presentacion-container{
+
+
+    .Presentacion-container {
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
@@ -484,17 +452,78 @@ footer {
         letter-spacing: 2px;
         line-height: 40px;
         text-shadow: 2px 2px 2px #232323;
-        }
-        .Presentacion-container h2{
-            width: 80%;
-            margin: 10px;
-            font-size: 50px;
-            line-height: 50px;
-            letter-spacing: 1px;
-        }
-        .Presentacion-container p{
-            margin-top: 40px;
-            width: 150px;
-        }
+    }
+
+    .Presentacion-container h2 {
+        width: 80%;
+        margin: 10px;
+        font-size: 50px;
+        line-height: 50px;
+        letter-spacing: 1px;
+    }
+
+    .Presentacion-container p {
+        margin-top: 40px;
+        width: 150px;
+    }
+
+    .fixed-top {
+        position: fixed;
+    }
+
+    .tratamientos-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card {
+        margin-top: 20px;
+        margin-bottom: 10px;
+        border: 2px solid #ccc;
+        box-shadow: 5px 5px 5px #ccc;
+        text-align: center;
+    }
+
+    .tratamientos-cards {
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .nosotros-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .nosotros-contenido {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+   
+  
 }
-    
+
+@media (width > 1600px) {
+
+    .Presentacion-container h1 {
+        font-size: 90px;
+        letter-spacing: 4px;
+        line-height: 90px;
+        text-shadow: 2px 2px 2px #232323;
+    }
+
+    .Presentacion-container h2 {
+        font-size: 50px;
+        line-height: 50px;
+    }
+
+    .Presentacion-container p {
+        margin-top: 80px;
+        width: 250px;
+    }
+}
