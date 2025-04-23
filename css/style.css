@@ -29,6 +29,7 @@ span {
     margin-bottom: .625rem;
 }
 
+
 /* ESTILOS HEADER */
 header {
     background-color: #232323;
@@ -44,10 +45,6 @@ header .logo img {
     height: 60px;
 }
 
-header .logo img:hover {
-    box-shadow: 0px 0px 1px #f5f5f5;
-}
-
 header .navbar a {
     margin: 0 15px;
     color: #f2f2f2;
@@ -60,6 +57,20 @@ header .navbar a {
         font-size: 18px;
         text-shadow: 0.5px 0.5px 10px #00c782;
     }
+}
+
+.hamburguesa{
+    display: none;
+    cursor: pointer;
+}
+
+.bar{
+    display: block;
+    width: 1.5625rem;
+    height: .1875rem;
+    margin: 5px auto;
+    background-color: #f2f2f2 ;
+    transition: .3s ease;
 }
 
 body {
@@ -110,7 +121,7 @@ body {
 .Presentacion-container p {
     font-size: 1.5rem;
     color: #f5f5f5;
-    border-radius: 10px;
+    border-radius: .625rem;
     width: 9.375rem;
     height: 2.8125rem;
     text-align: center;
@@ -188,7 +199,7 @@ body {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 150px;
+    margin-bottom: 9.375rem;
 }
 
 .nosotros-contenido {
@@ -254,8 +265,8 @@ body {
     font-size: 3rem;
     color: #f5f5f5;
     width: 100%;
-    height: 140px;
-    line-height: 130px;
+    height: 8.75rem;
+    line-height: 8.125rem;
     text-align: center;
     padding: .625rem;
     margin-top: 3.125rem;
@@ -274,7 +285,8 @@ body {
 }
 
 .precio-card {
-    width: 20%;
+    width: 100%;
+    max-width: 300px;
     height: 40rem;
     background-color: #fbfbfb;
     border-radius: .625rem;
@@ -294,7 +306,7 @@ body {
 .precio-card-otro {
     font-size: 2.5rem;
     color: #232323;
-    height: 40px;
+    height: 2.5rem;
     text-align: center;
     margin-top: 1.25rem;
     padding-top: 1.25rem;
@@ -305,28 +317,28 @@ body {
 .precio-card-precio {
     font-size: 2.5rem;
     text-align: center;
-    margin-top: 50px;
+    margin-top: 3.125rem;
 }
 
 .precio-card-descuento {
-    font-size: 35px;
+    font-size: 2.1875rem;
     color: #f5f5f5;
     width: 100%px;
-    height: 50px;
+    height: 3.125rem;
     text-align: center;
-    line-height: 50px;
-    padding: 10px;
-    margin-top: 50px;
-    margin-bottom: 20px;
+    line-height: 3.125rem;
+    padding: .625rem;
+    margin-top: 3.125rem;
+    margin-bottom: 1.25rem;
     background-color: #00c782;
-    border-radius: 10px;
+    border-radius: .625rem;
     background-image: linear-gradient(90deg, #5a9654 1%, #375e26 52%, #1c201e 100%);
     text-shadow: 1px 0px 1px #f2f2f2;
 }
 
 /* SECCION CONTACTO */
 .contacto-container p {
-    font-size: 24px;
+    font-size: 1.5rem;
 }
 
 .contacto-presentacion {
@@ -337,7 +349,7 @@ body {
 
 .contacto-caja {
     display: flex;
-    margin-top: 100px;
+    margin-top: 6.25rem;
     justify-content: space-around;
 }
 
@@ -346,7 +358,7 @@ body {
 }
 
 .contacto-info p {
-    font-size: 20px;
+    font-size: 1.25rem;
 }
 
 .contacto-contacto {
@@ -356,29 +368,29 @@ body {
 
 .contacto-icon {
     display: flex;
-    margin: 5px;
+    margin: .3125rem;
 }
 
 .contacto-icon h5 {
-    font-size: 26px;
+    font-size: 1.625rem;
 }
 
 .contacto-icon p {
-    font-size: 18px;
+    font-size: 1.125rem;
 }
 
 .contacto-formulario {
-    height: 500px;
+    height: 31.25rem;
     width: 50%;
     background-color: #ebf0ea;
-    border-radius: 10px;
+    border-radius: .625rem;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .contacto-formulario h4 {
-    font-size: 22px;
+    font-size: 1.375rem;
 }
 
 .contacto-form {
@@ -390,8 +402,6 @@ body {
 
 /* PIE DE PAGINA */
 footer {
-
-    width: 40px;
     background-color: #232323;
     width: 100%;
 }
@@ -409,7 +419,7 @@ footer {
     color: white;
     padding: 15px 20px;
     border: none;
-    border-radius: 50px;
+    border-radius: 3.125rem;
     font-weight: bold;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     transition: background-color 0.3s ease;
@@ -425,12 +435,70 @@ footer {
 /*  a576px para teléfonos móviles, 768px para tabletas, 
 992px para portátiles, y 1200px para grandes dispositivos. 
 Cómo usar media queries */
+@media (width <= 36rem ){
+.nosotros-img{
 
+min-width: 21.875rem;
 
-@media (width <=810px) {
-    .navbar {
-        display: none;
+    
+}
+
+}
+
+@media (width <= 50.625rem) {
+    header{
+        padding: 0;
+        
     }
+    .navbar {
+     
+       position: fixed;
+       left: -100%;
+       top: 3.75rem;
+       flex-direction: column;
+       background-color: #232323;
+       width: 100%;
+       transition: .3s;
+       padding: 0;
+    }
+    .navbar a{
+        
+        
+        &:hover{
+            text-align: center;
+            width: 100%;
+        
+            cursor: pointer;
+            color: #232323;
+        }
+    }
+    .navbar.active{
+        left: 0;
+    }
+    .nav-item{
+padding: 1rem 0;
+    }
+
+
+    .hamburguesa{
+        display: block;
+       padding-right: 25px;
+    }
+
+.hamburguesa.active .bar:nth-child(2){
+    opacity: 0;
+}
+.hamburguesa.active .bar:nth-child(1){
+    transform: translateY(8px) rotate(45deg);
+}
+.hamburguesa.active .bar:nth-child(3){
+    transform: translateY(-8px) rotate(-45deg);
+    
+}
+
+
+
+    
 
     .Presentacion-container {
         display: flex;
@@ -441,26 +509,26 @@ Cómo usar media queries */
     }
 
     .Presentacion-container h1 {
-        font-size: 55px;
+        font-size: 3.4375rem;
         width: 50%;
         margin: 2px;
         text-align: center;
         letter-spacing: 2px;
-        line-height: 40px;
+        line-height: 2.5rem;
         text-shadow: 2px 2px 2px #232323;
     }
 
     .Presentacion-container h2 {
         width: 80%;
         margin: 10px;
-        font-size: 50px;
-        line-height: 50px;
+        font-size: 3.125rem;
+        line-height: 3.125rem;
         letter-spacing: 1px;
     }
 
     .Presentacion-container p {
-        margin-top: 40px;
-        width: 150px;
+        margin-top: 2.5rem;
+        width: 9.375rem;
     }
 
     .fixed-top {
@@ -529,22 +597,22 @@ Cómo usar media queries */
 
 }
 
-@media (width > 1600px) {
+@media (width > 100rem) {
 
     .Presentacion-container h1 {
-        font-size: 90px;
+        font-size: 5.625rem;
         letter-spacing: 4px;
-        line-height: 90px;
+        line-height: 5.625rem;
         text-shadow: 2px 2px 2px #232323;
     }
 
     .Presentacion-container h2 {
-        font-size: 50px;
-        line-height: 50px;
+        font-size: 3.125rem;
+        line-height: 3.125rem;
     }
 
     .Presentacion-container p {
-        margin-top: 80px;
-        width: 250px;
+        margin-top: 5rem;
+        width: 15.625rem;
     }
 }
